@@ -17,7 +17,7 @@ const LoginPage = () => {
 
   return (
     
-      <Card style={{ maxWidth: 400, margin: 'auto' }}>
+      <Card style={{ maxWidth: 400, margin: 'left'}}>
         <Title level={2}>Login</Title>
         <Form layout="vertical" onFinish={onFinish}>
           <Form.Item label="Email" name="email" rules={[{ required: true, message: 'Enter email!' }]}>

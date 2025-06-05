@@ -37,9 +37,9 @@ export default function DashboardPage() {
 
         <Col span={12}>
           <Card title="Recent Comments" style={{ background: darkMode ? "#1f1f1f" : "#fff" }}>
-            <p>✅ "Nice dashboard!" - Alice</p>
-            <p>✅ "Great UI!" - Bob</p>
-            <p>✅ "Amazing features!" - Charlie</p>
+            <p>✅ "Nice dashboard!" - Mohammed</p>
+            <p>✅ "Great UI!" - Amanuel</p>
+            <p>✅ "Amazing features!" - Habtamu</p>
           </Card>
         </Col>
       </Row>

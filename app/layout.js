@@ -27,8 +27,9 @@ export default function RootLayout({ children }) {
       <Avatar size={50} src="image/R.jpg" />
        <Link href="https://www.girmasossina2@gmail.com" passHref>
         <MessageOutlined style={{ color: "#1890ff", fontSize:"30px", cursor: "pointer", color: hover ? "#ff4d4f" : "#1890ff", }} />
-      </Link>
       <p>Email Me</p>
+      </Link>
+      
     </div>
     
         <Layout style={{ minHeight: '100vh' }}>
