@@ -1,6 +1,6 @@
 "use client";
 import { Carousel } from "antd";
-
+import {Card} from "antd";
 const images = [
   "/image/b.jpg",
   "/image/e.jpg",
@@ -15,12 +15,19 @@ const images = [
 
 export default function ImageSlider() {
   return (
-    <Carousel autoplay>
+    <div>
+    
+    <Carousel autoplay autoplaySpeed={2000}>
       {images.map((src, index) => (
         <div key={index}>
-          <img src={src} alt={`Slide ${index + 1}`} style={{ width: "100%", height: "400px", objectFit: "cover" }} />
+          <img src={src} alt={`Slide ${index + 1}`} style={{ width: "40%", height: "40%", objectFit: "cover" }} />
         </div>
       ))}
+      
     </Carousel>
+    
+    </div>
+    
+    
   );
 }

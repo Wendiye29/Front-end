@@ -23,12 +23,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div style={{ display: "flex", justifyContent: "flex-end", padding: "1px" }}>
-      <Avatar size={50} src="image/R.jpg" />
+        <Layout>
+      <Header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0 20px" }}>
+        <div style={{ color: "white", fontSize: "20px", fontWeight: "bold" }}>
+          Welcome to My Website
+          <Avatar size={50} src="image/R.jpg" />
+          <MessageOutlined style={{ color: "#1890ff", fontSize:"30px", cursor: "pointer", color: hover ? "yellow" : "blue", }} />
+        </div>
+        <div style={{ display:"flex", color: "white", fontSize: "16px", justifyContent:"flex-end", padding: "0 20px" }}>
        <Link href="https://www.girmasossina2@gmail.com" passHref>
-        <MessageOutlined style={{ color: "#1890ff", fontSize:"30px", cursor: "pointer", color: hover ? "#ff4d4f" : "#1890ff", }} />
+        
       <p>Email Me</p>
       </Link>
+        </div>
+      </Header>
+    </Layout>
+        <div style={{ display: "flex", justifyContent: "flex-end", padding: "1px" }}>
+      
       
     </div>
     
