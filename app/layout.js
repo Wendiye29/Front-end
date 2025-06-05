@@ -6,11 +6,11 @@ import { Avatar } from "antd";
 import Link from 'next/link';
 import { Button } from 'antd';
 const { Header, Sider, Content } = Layout;
-
+import { MessageOutlined } from "@ant-design/icons";
 export default function RootLayout({ children }) {
  
   const [collapsed, setCollapsed] = useState(false);
-
+  const [hover, setHover] = useState(false);  
   const menuItems = [
     { key: '1', icon: <LoginOutlined />, label: <a href="/login">Login</a> },
     { key: '2', icon: <UserOutlined />, label: <a href="/register">Register</a> },
@@ -25,7 +25,10 @@ export default function RootLayout({ children }) {
       <body>
         <div style={{ display: "flex", justifyContent: "flex-end", padding: "1px" }}>
       <Avatar size={50} src="image/R.jpg" />
-      <Button type="link" href="girmasossina2@gmail.com">Email me</Button>
+       <Link href="https://www.girmasossina2@gmail.com" passHref>
+        <MessageOutlined style={{ color: "#1890ff", fontSize:"30px", cursor: "pointer", color: hover ? "#ff4d4f" : "#1890ff", }} />
+      </Link>
+      <p>Email Me</p>
     </div>
     
         <Layout style={{ minHeight: '100vh' }}>
@@ -33,9 +36,7 @@ export default function RootLayout({ children }) {
             <Menu theme="dark" mode="inline" items={menuItems} />
           </Sider>
           <Layout>
-            <Header style={{ background: '#001529', padding: '10px', color: '#fff' }}>
-              <h2 style={{ color: '#fff', marginLeft: '20px' }}>Next.js App</h2>
-            </Header>
+            
             <Content style={{ margin: '20px', padding: '20px', background: '#fff' }}>
               {children}
             </Content>
